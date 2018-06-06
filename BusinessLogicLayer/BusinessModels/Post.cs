@@ -8,7 +8,7 @@ namespace BusinessLogicLayer.BusinessModels
     {
         public Post()
         {
-
+            Tags = new List<PostTag>();
         }
         public int Id { get; set; }
 

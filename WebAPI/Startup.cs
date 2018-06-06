@@ -40,7 +40,7 @@ namespace WebAPI
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            seeder.SeedData();
             app.UseMvc();
         }
     }
