@@ -7,6 +7,6 @@ namespace BusinessLogicLayer.Repositories
 {
     public interface IUsersRepository : IRepository<User>
     {
-        User GetAuthorWithPosts(int id);
+        User GetUsersWithPosts(int id);
     }
 }
