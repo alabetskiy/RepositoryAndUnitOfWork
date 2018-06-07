@@ -8,6 +8,6 @@ namespace BusinessLogicLayer.Repositories
     public interface IPostRepository : IRepository<Post>
     {
         IEnumerable<Post> GetTopSellingPosts(int count);
-        IEnumerable<Post> GetPostsWithAuthors(int pageIndex, int pageSize);
+        IEnumerable<Post> GetPostsWithUsers(int pageIndex, int pageSize);
     }
 }
