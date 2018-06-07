@@ -30,6 +30,7 @@ namespace WebAPI
             services.AddDbContext<DataContext>(x => x.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))
            .ConfigureWarnings(warnings => warnings.Ignore(CoreEventId.IncludeIgnoredWarning)));
             services.AddTransient<Seed>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddMvc();
         }
 
@@ -40,7 +41,7 @@ namespace WebAPI
             {
                 app.UseDeveloperExceptionPage();
             }
-            seeder.SeedData();
+            //seeder.SeedData();
             app.UseMvc();
         }
     }
